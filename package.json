@@ -1,6 +1,6 @@
 {
-  "name": "quill",
-  "version": "2.0.0-dev.4",
+  "name": "@psmty/quill",
+  "version": "2.0.0-dev.5",
   "description": "Your powerful, rich text editor",
   "author": "Jason Chen <jhchen7@gmail.com>",
   "homepage": "http://quilljs.com",
@@ -78,7 +78,7 @@
     "defaults"
   ],
   "scripts": {
-    "build": "npm run build:typescript && npm run build:webpack",
+    "build": "npm run build:webpack && tsc -p tsconfig.npm.json --emitDeclarationOnly",
     "build:typescript": "tsc -p tsconfig.npm.json",
     "build:webpack": "webpack --config _develop/webpack.config.js",
     "build:release": "./_develop/scripts/release.sh",

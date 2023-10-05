@@ -3,6 +3,7 @@
   "compilerOptions": {
     "target": "ES6",
     "noEmit": false,
+    "outDir": "dist",
     "module": "ES6"
   },
   "include": [
