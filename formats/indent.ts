@@ -2,10 +2,15 @@ import { ClassAttributor, Scope } from 'parchment';
 
 class IndentAttributor extends ClassAttributor {
   add(node: HTMLElement, value: string | number) {
+    const numberValue = Number(value);
     let normalizedValue = 0;
-    if (value === '+1' || value === '-1') {
-      const indent = this.value(node) || 0;
-      normalizedValue = value === '+1' ? indent + 1 : indent - 1;
+    if (!isNaN(numberValue)) {
+      if (numberValue > 0) {
+        normalizedValue = numberValue;
+      } else if (numberValue < 0) {
+        const indent = this.value(node) || 0;
+        normalizedValue = indent - 1
+      }
     }
     if (normalizedValue === 0) {
       this.remove(node);
