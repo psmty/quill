@@ -1,6 +1,6 @@
 {
   "name": "@psmty/quill",
-  "version": "2.0.2-dev.5",
+  "version": "2.0.2-dev.6",
   "description": "Your powerful, rich text editor",
   "author": "Jason Chen <jhchen7@gmail.com>",
   "homepage": "http://quilljs.com",
@@ -15,6 +15,9 @@
   "workspaces": [
     "website"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
   "dependencies": {
     "compute-scroll-into-view": "3.0.3",
     "eventemitter3": "^4.0.7",
