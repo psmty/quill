@@ -56,7 +56,8 @@ const stylRules = {
 };
 
 const baseConfig = {
-  mode: 'development',
+  mode: 'production',
+  devtool: false,
   context: path.resolve(__dirname, '..'),
   entry: {
     'quill.js': ['./quill.ts'],
