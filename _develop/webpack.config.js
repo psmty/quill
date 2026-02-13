@@ -111,7 +111,7 @@ module.exports = env => {
       ...prodConfig,
       mode: 'production',
       entry: { 'quill.min.js': './quill.ts' },
-      devtool: 'source-map',
+      // devtool: 'source-map',
     };
   }
   if (env?.coverage) {
